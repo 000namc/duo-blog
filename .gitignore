@@ -29,3 +29,10 @@ yarn.lock
 # ide
 .idea
 *.iml
+.kata.local.toml
+.kata.toml
+server/users.json
+server/secret.key
+server/build.log
+server/server.log
+install.log

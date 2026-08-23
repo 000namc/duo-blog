@@ -1,99 +1,68 @@
-# 🍥Fuwari  
-![Node.js >= 20](https://img.shields.io/badge/node.js-%3E%3D20-brightgreen) 
-![pnpm >= 9](https://img.shields.io/badge/pnpm-%3E%3D9-blue) 
-[![DeepWiki](https://img.shields.io/badge/DeepWiki-saicaca%2Ffuwari-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAyCAYAAAAnWDnqAAAAAXNSR0IArs4c6QAAA05JREFUaEPtmUtyEzEQhtWTQyQLHNak2AB7ZnyXZMEjXMGeK/AIi+QuHrMnbChYY7MIh8g01fJoopFb0uhhEqqcbWTp06/uv1saEDv4O3n3dV60RfP947Mm9/SQc0ICFQgzfc4CYZoTPAswgSJCCUJUnAAoRHOAUOcATwbmVLWdGoH//PB8mnKqScAhsD0kYP3j/Yt5LPQe2KvcXmGvRHcDnpxfL2zOYJ1mFwrryWTz0advv1Ut4CJgf5uhDuDj5eUcAUoahrdY/56ebRWeraTjMt/00Sh3UDtjgHtQNHwcRGOC98BJEAEymycmYcWwOprTgcB6VZ5JK5TAJ+fXGLBm3FDAmn6oPPjR4rKCAoJCal2eAiQp2x0vxTPB3ALO2CRkwmDy5WohzBDwSEFKRwPbknEggCPB/imwrycgxX2NzoMCHhPkDwqYMr9tRcP5qNrMZHkVnOjRMWwLCcr8ohBVb1OMjxLwGCvjTikrsBOiA6fNyCrm8V1rP93iVPpwaE+gO0SsWmPiXB+jikdf6SizrT5qKasx5j8ABbHpFTx+vFXp9EnYQmLx02h1QTTrl6eDqxLnGjporxl3NL3agEvXdT0WmEost648sQOYAeJS9Q7bfUVoMGnjo4AZdUMQku50McDcMWcBPvr0SzbTAFDfvJqwLzgxwATnCgnp4wDl6Aa+Ax283gghmj+vj7feE2KBBRMW3FzOpLOADl0Isb5587h/U4gGvkt5v60Z1VLG8BhYjbzRwyQZemwAd6cCR5/XFWLYZRIMpX39AR0tjaGGiGzLVyhse5C9RKC6ai42ppWPKiBagOvaYk8lO7DajerabOZP46Lby5wKjw1HCRx7p9sVMOWGzb/vA1hwiWc6jm3MvQDTogQkiqIhJV0nBQBTU+3okKCFDy9WwferkHjtxib7t3xIUQtHxnIwtx4mpg26/HfwVNVDb4oI9RHmx5WGelRVlrtiw43zboCLaxv46AZeB3IlTkwouebTr1y2NjSpHz68WNFjHvupy3q8TFn3Hos2IAk4Ju5dCo8B3wP7VPr/FGaKiG+T+v+TQqIrOqMTL1VdWV1DdmcbO8KXBz6esmYWYKPwDL5b5FA1a0hwapHiom0r/cKaoqr+27/XcrS5UwSMbQAAAABJRU5ErkJggg==)](https://deepwiki.com/saicaca/fuwari)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_shield&issueType=license)
+# ✌️ Duo Blog
 
-A static blog template built with [Astro](https://astro.build).
+둘이서(또는 가족·소그룹이) 같이 쓰는 **비공개 셀프호스팅 블로그** 템플릿.
 
-[**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)
+- 화면은 [fuwari](https://github.com/saicaca/fuwari)(Astro 정적 블로그) 그대로 — 다크모드·목차·검색까지 예쁘게 나온다.
+- 블로그를 보다가 오른쪽 아래 **✏️(이 글 수정) / ＋(새 글)** 버튼으로 바로 쓴다. 왼쪽 마크다운 편집기, 오른쪽엔 블로그 스타일 그대로의 실시간 미리보기.
+- 서버는 `server/server.py` **파이썬 표준 라이브러리 단일 파일**. 데이터베이스도, 외부 서비스도, 클라우드 계정도 필요 없다.
+- 로그인은 자체 계정(이메일+비밀번호). **가입 페이지가 없다** — 계정은 관리자가 명령 한 줄로 만든다. 우리끼리 쓰는 물건이라는 뜻이다.
+- [Tailscale](https://tailscale.com)로 묶으면 인터넷에 아무것도 노출하지 않고 두 사람 기기에서만 열린다.
+- 글을 저장할 때마다 자동으로 git 커밋(+원격이 있으면 push)되어 백업이 남는다.
 
-![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
+## 왜 만들었나
 
-🌏 README in
-[**中文**](https://github.com/saicaca/fuwari/blob/main/docs/README.zh-CN.md) /
-[**日本語**](https://github.com/saicaca/fuwari/blob/main/docs/README.ja.md) /
-[**한국어**](https://github.com/saicaca/fuwari/blob/main/docs/README.ko.md) /
-[**Español**](https://github.com/saicaca/fuwari/blob/main/docs/README.es.md) /
-[**ไทย**](https://github.com/saicaca/fuwari/blob/main/docs/README.th.md) /
-[**Tiếng Việt**](https://github.com/saicaca/fuwari/blob/main/docs/README.vi.md) /
-[**Bahasa Indonesia**](https://github.com/saicaca/fuwari/blob/main/docs/README.id.md) (Provided by the community and may not always be up-to-date)
+부부 블로그를 만들면서 Cloudflare Access + Git 기반 CMS로 먼저 갔다가, "글 한 번 쓰는데
+이메일 인증코드에 GitHub OAuth까지" 통과해야 하는 게 두 사람 규모에는 과하다는 걸 배웠다.
+필요한 건 **내 서버에서 도는 작은 프로세스 하나**였다.
 
-## ✨ Features
+## 빠른 시작
 
-- [x] Built with [Astro](https://astro.build) and [Tailwind CSS](https://tailwindcss.com)
-- [x] Smooth animations and page transitions
-- [x] Light / dark mode
-- [x] Customizable theme colors & banner
-- [x] Responsive design
-- [x] Search functionality with [Pagefind](https://pagefind.app/)
-- [x] [Markdown extended features](https://github.com/saicaca/fuwari?tab=readme-ov-file#-markdown-extended-syntax)
-- [x] Table of contents
-- [x] RSS feed
+요구사항: Python 3.9+, Node.js 20+ (pnpm)
 
-## 🚀 Getting Started
+```sh
+git clone https://github.com/000namc/duo-blog.git my-blog
+cd my-blog
+pnpm install && pnpm build        # 정적 사이트 빌드 (dist/)
 
-1. Create your blog repository:
-    - [Generate a new repository](https://github.com/saicaca/fuwari/generate) from this template or fork this repository.
-    - Or run one of the following commands:
-       ```sh
-       npm create fuwari@latest
-       yarn create fuwari
-       pnpm create fuwari@latest
-       bun create fuwari@latest
-       deno run -A npm:create-fuwari@latest
-       ```
-2. To edit your blog locally, clone your repository, run `pnpm install` to install dependencies.
-    - Install [pnpm](https://pnpm.io) `npm install -g pnpm` if you haven't.
-3. Edit the config file `src/config.ts` to customize your blog.
-4. Run `pnpm new-post <filename>` to create a new post and edit it in `src/content/posts/`.
-5. Deploy your blog to Vercel, Netlify, GitHub Pages, etc. following [the guides](https://docs.astro.build/en/guides/deploy/). You need to edit the site configuration in `astro.config.mjs` before deployment.
+python3 server/server.py adduser you@example.com 이름
+# → 임시 비밀번호가 출력된다. 함께 쓸 사람 계정도 같은 방식으로.
 
-## 📝 Frontmatter of Posts
-
-```yaml
----
-title: My First Blog Post
-published: 2023-09-09
-description: This is the first post of my new Astro blog.
-image: ./cover.jpg
-tags: [Foo, Bar]
-category: Front-end
-draft: false
-lang: jp      # Set only if the post's language differs from the site's language in `config.ts`
----
+python3 server/server.py           # http://127.0.0.1:4600
 ```
 
-## 🧩 Markdown Extended Syntax
+브라우저에서 열고 로그인하면 끝. 글을 저장하면 자동으로 재빌드된다(수 초).
+비밀번호는 로그인 후 `/account`에서 각자 바꾼다.
 
-In addition to Astro's default support for [GitHub Flavored Markdown](https://github.github.com/gfm/), several extra Markdown features are included:
+## 서버에 올리기 (상시 운영)
 
-- Admonitions ([Preview and Usage](https://fuwari.vercel.app/posts/markdown-extended/#admonitions))
-- GitHub repository cards ([Preview and Usage](https://fuwari.vercel.app/posts/markdown-extended/#github-repository-cards))
-- Enhanced code blocks with Expressive Code ([Preview](https://fuwari.vercel.app/posts/expressive-code/) / [Docs](https://expressive-code.com/))
+집에 남는 맥, 개인 맥북, 무료 클라우드 VM(Oracle) 어디든 좋다.
+**Tailscale 세팅·상시 구동(launchd/systemd)·비공개 HTTPS 노출**은 별도 가이드로 정리해뒀다:
 
-## ⚡ Commands
+👉 **[selfhost-kit — 나의 첫 셀프호스팅 서버 만들기](https://github.com/000namc/selfhost-kit)**
 
-All commands are run from the root of the project, from a terminal:
+요지만 적으면:
 
-| Command                    | Action                                              |
-|:---------------------------|:----------------------------------------------------|
-| `pnpm install`             | Installs dependencies                               |
-| `pnpm dev`                 | Starts local dev server at `localhost:4321`         |
-| `pnpm build`               | Build your production site to `./dist/`             |
-| `pnpm preview`             | Preview your build locally, before deploying        |
-| `pnpm check`               | Run checks for errors in your code                  |
-| `pnpm format`              | Format your code using Biome                        |
-| `pnpm new-post <filename>` | Create a new post                                   |
-| `pnpm astro ...`           | Run CLI commands like `astro add`, `astro check`    |
-| `pnpm astro --help`        | Get help using the Astro CLI                        |
+```sh
+# tailnet 전용 HTTPS (Tailscale 켠 기기에서만 접속됨)
+tailscale serve --bg --https=10000 http://127.0.0.1:4600
+```
 
-## ✏️ Contributing
+## 구조
 
-Check out the [Contributing Guide](https://github.com/saicaca/fuwari/blob/main/CONTRIBUTING.md) for details on how to contribute to this project.
+| 파일 | 역할 |
+|---|---|
+| `server/server.py` | dist/ 서빙(로그인 필수) + ✏️ 편집 + 저장 시 `pnpm build` + git 백업 |
+| `server/users.json` | 계정(PBKDF2 해시). git에 올라가지 않음 |
+| `src/content/posts/*.md` | 글 원본 (frontmatter: title, published, tags, category, draft) |
+| `src/config.ts` | 블로그 제목·색·프로필 등 fuwari 설정 |
 
-## 📄 License
+## 커스터마이즈
 
-This project is licensed under the MIT License.
+- 블로그 제목·색·프로필: `src/config.ts`
+- 데모 글 삭제: `src/content/posts/`에서 지우고 다시 빌드
+- fuwari 업스트림 따라가기: `git fetch upstream && git merge upstream/main`
+- 세션 기간·포트: `server/server.py` 상단 상수 (`DUO_BLOG_PORT` 환경변수로도 지정 가능)
 
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari.svg?type=large&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fsaicaca%2Ffuwari?ref=badge_large&issueType=license)
+## 라이선스
+
+fuwari(MIT, [LICENSE](LICENSE)) 위에 서버 한 파일을 더한 것이다. 추가분도 MIT.
